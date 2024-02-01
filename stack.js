@@ -1,4 +1,5 @@
 // LIFO
+// FILO
 class Stack {
   constructor() {
     this.items = [];

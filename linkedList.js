@@ -35,6 +35,8 @@ class linkedList {
       this.head = node;
     } else {
       let cur = this.head;
+      // while(curr) -> the last value of the curr will be null (last node.next value)
+      // while(curr) -> the last value of the curr will be node.value ( last node.value value)
       while (cur.next !== null) {
         cur = cur.next;
       }
