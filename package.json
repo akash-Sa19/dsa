@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "name": "dsa",
+  "version": "1.0.0",
+  "main": "BinarySearch.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon pratice/pra1.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
