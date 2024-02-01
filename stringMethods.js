@@ -36,7 +36,6 @@ console.log(str.replace("the", "apple"));
 // - `search()`: Searches a string for a specified value or regular expression and returns the position of the match.
 // - `slice()`: Extracts a part of a string and returns a new string.
 // - `split()`: Splits a string into an array of substrings.
-// - `substr()`: Extracts a part of a string, starting from the specified index, and returns a new string.
 // - `substring()`: Extracts the characters from a string between two specified indices and returns a new string.
 // - `toLowerCase()`: Converts a string to lowercase letters.
 // - `toString()`: Returns the value of a string.
@@ -58,4 +57,5 @@ console.log(str.replace("the", "apple"));
 // (4) JavaScript String Reference - W3Schools. https://www.w3schools.com/jsref/jsref_obj_string.asp.
 // (5) JavaScript String() Method - W3Schools. https://www.w3schools.com/jsref/jsref_string.asp.
 
-let l;
+let l = "apple";
+console.log(l.substring(1));
