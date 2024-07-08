@@ -14,6 +14,7 @@ class HashTable {
   set(key, value) {
     const index = this.hash(key);
     // this.table[index] = value;
+    
     let bucket = this.table[index];
     if (!bucket) {
       this.table[index] = [[key, value]];

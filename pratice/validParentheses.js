@@ -11,7 +11,6 @@ class stack {
     this.items = {};
     this.rear = 0;
   }
-
   isEmpty() {
     return this.rear === 0;
   }
@@ -62,7 +61,7 @@ const isValid = function (s) {
   return !st.getSize();
 };
 
-console.log(isValid("[{{()}{}}]()"));
+console.log(isValid("[{}]()"));
 
 // const isVal = function (s) {
 //   const st = new stack();

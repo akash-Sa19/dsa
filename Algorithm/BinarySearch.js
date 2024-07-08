@@ -3,8 +3,8 @@ function Binarysearch(arr, target) {
   let rightIndex = arr.length - 1;
 
   while (leftIndex <= rightIndex) {
-    // console.log(leftIndex);
-    // console.log(rightIndex);
+    console.log(leftIndex);
+    console.log(rightIndex);
     let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
     console.log(middleIndex);
     if (target === arr[middleIndex]) {

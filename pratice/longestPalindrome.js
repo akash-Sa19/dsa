@@ -1,3 +1,5 @@
+// uncomplete program
+
 // Given a string s, return the longest palindromic substring in s.
 var longestPalindrome = function (s) {
   let str = s.split("");

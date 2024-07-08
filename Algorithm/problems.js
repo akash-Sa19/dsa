@@ -14,7 +14,7 @@ function cartesionProduct(arr1, arr2) {
   }
   return temp;
 }
-// console.log(cartesionProduct(arr1, arr2));n
+console.log(cartesionProduct(arr1, arr2));
 // bigO - O(n^2)
 
 // climbing staircase problem
@@ -137,30 +137,8 @@ delete p.hobbie;
 // console.log(Object.values(p));
 // console.log(Object.entries(p));
 
-const set = new Set([1, 2, 3]);
-
-set.add(4);
-set.add(2);
-set.add(4);
-for (let item of set) {
-  // console.log(item);
-}
 // console.log(set.has(4));
 // console.log(set.delete(3));
 // console.log(set);
 
 // console.log(set.size);
-
-const map = new Map([
-  ["a", 1],
-  ["b", 2],
-]);
-
-map.set("c", 3);
-map.delete("c");
-console.log(map.has("c"));
-console.log(map.size);
-
-for (let [key, value] of map) {
-  console.log(`${key} : ${value}`);
-}

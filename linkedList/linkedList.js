@@ -36,7 +36,7 @@ class linkedList {
     } else {
       let cur = this.head;
       // while(curr) -> the last value of the curr will be null (last node.next value)
-      // while(curr) -> the last value of the curr will be node.value ( last node.value value)
+      // while(curr.next) -> the last value of the curr will be node.value ( last node.value value)
       while (cur.next !== null) {
         cur = cur.next;
       }
@@ -136,32 +136,47 @@ const list = new linkedList();
 
 console.log(list.isEmpty());
 
-console.log(list.prepend(10));
-console.log(list.prepend(20));
-console.log(list.prepend(30));
-console.log(list.prepend(40));
-console.log(list.append(50));
-console.log(list.append(60));
-console.log(list.prepend(70));
-
-console.log(list.getSize());
-
-console.log(list.isEmpty());
+list.prepend(20);
+list.prepend(10);
+// list.append(50)
+list.append(600);
+// console.log(list.head);
 console.log(list.print());
 
-list.insert(100, 5);
-console.log(list.print());
-console.log(list.insert(100, 7));
-console.log(list.insert(110, 1));
-console.log(list.print());
-console.log(list.getSize());
+const list2 = new linkedList();
+list2.append(70);
+list2.append(80);
+// list2.append(10);
+console.log(list2.print());
 
-console.log(list.remove(110));
-console.log(list.print());
+// for two linked list to be merge they should be sorted first
+// or pass them as sorted linked list
+var mergeTwoList = function (head1, head2) {
+  // how can i merge two list??
+  if (!head1) {
+    return head2;
+  }
+  if (!head2) {
+    return head1;
+  }
+  let newList = new Node();
+  let curr = newList;
 
-console.log(list.remove(10));
-console.log(list.print());
-
-console.log(list.search(300));
-
-console.log(list.reverse());
+  while (head1 && head2) {
+    if (head1.value < head2.value) {
+      // console.log(curr);
+      curr.next = head1;
+      // console.log(curr);
+      head1 = head1.next;
+      // console.log(curr);
+    } else {
+      curr.next = head2;
+      head2 = head2.next;
+    }
+    curr = curr.next;
+  }
+  curr.next = head1 || head2;
+  return newList.next;
+};
+// console.log(list.head);
+console.log(mergeTwoList(list.head, list2.head));

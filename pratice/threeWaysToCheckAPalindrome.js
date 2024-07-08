@@ -28,6 +28,26 @@ const checkPalindrome3 = (s) => {
   return false;
 };
 
+var checkPalindrome4 = function (s) {
+  if (s == " ") return true;
+  if (s.length == 1) return true;
+
+  let newStr = "";
+  for (let i of s) {
+    // console.log(i);
+    let charCode = i.charCodeAt();
+    if (
+      (charCode > 47 && charCode < 58) || // numeric (0-9)
+      (charCode > 64 && charCode < 91) || // upper alpha (A-Z)
+      (charCode > 96 && charCode < 123) // lower alpha (a-z)
+    ) {
+      newStr += i.toLowerCase();
+    }
+  }
+
+  return newStr === newStr.split("").reverse().join("");
+};
+
 console.log(checkPalindrom("kayak"));
 console.log(checkPalindrom2("2222"));
 

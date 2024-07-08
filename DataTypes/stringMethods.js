@@ -41,6 +41,8 @@ console.log(str.replace("the", "apple"));
 // - `toString()`: Returns the value of a string.
 // - `toUpperCase()`: Converts a string to uppercase letters.
 // - `trim()`: Removes whitespace from both ends of a string.
+// -  trimStart() and trimEnd() -> remove whitespace from a particular direction
+//
 
 // For more information on these methods and their usage, you can refer to the following links:
 

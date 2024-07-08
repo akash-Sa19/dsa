@@ -7,7 +7,7 @@
   "main": "BinarySearch.js",
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon pratice/pra1.py"
+    "start": "nodemon ./test1.py"
   },
   "keywords": [],
   "author": "",

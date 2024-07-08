@@ -60,8 +60,8 @@ class doubleLinkedList {
     if (this.isEmpty()) {
       return null;
     } else if (this.size === 1) {
-      this.head = node;
-      this.tail = node;
+      this.head = null;
+      this.tail = null;
     } else {
       this.head = this.head.next;
       this.head.prev = null;
