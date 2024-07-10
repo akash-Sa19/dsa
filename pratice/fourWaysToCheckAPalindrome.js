@@ -53,3 +53,40 @@ console.log(checkPalindrom2("2222"));
 
 let apple = "apple";
 console.log(apple[1]);
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function (s) {
+  let res = "";
+  let resLen = 0;
+
+  for (let n in s) {
+    n = Number(n);
+    // for odd length
+    let r = n,
+      l = n;
+    while (r < s.length && l >= 0 && s[l] === s[r]) {
+      if (r - l + 1 > resLen) {
+        res = s.slice(l, r + 1);
+        resLen = r - l + 1;
+      }
+      l -= 1;
+      r += 1;
+    }
+
+    // for even length
+    l = n;
+    r = n + 1;
+    while (l >= 0 && r < s.length && s[l] === s[r]) {
+      if (r - l + 1 > resLen) {
+        res = s.slice(l, r + 1);
+        resLen = r - l + 1;
+      }
+      l -= 1;
+      r += 1;
+    }
+  }
+  return res;
+};
