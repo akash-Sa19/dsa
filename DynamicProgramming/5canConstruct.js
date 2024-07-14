@@ -1,4 +1,5 @@
 // the function should return a boolean indicating whether or not the "target" can be constructed by concatenating elements of the "wordBank" array
+// this type of soltion is call top-down memorization sol
 
 // m = target.length , n = wordbank.length
 //  time = O(n^m * m)
@@ -55,3 +56,5 @@ console.log(
     "eeeeeee",
   ])
 );
+
+// dp bottom-up approch

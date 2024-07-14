@@ -1,6 +1,8 @@
 // the function should return an array conatining any combination of elements that add up to exactly the targetSum. If there is no combination that adds up to the targetSum, then return null
 // If there are multiple combinations possible, you may return any single one
 
+// this type of soltion is call top-down memorization sol
+
 // m = targetSum, n = array length
 // time O(n^m * m)
 // space O(m)

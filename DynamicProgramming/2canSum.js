@@ -2,7 +2,9 @@
 // time =  O(n ^ m)
 // space = O(m)
 
-const canSum = (targetSum, numbers) => {
+// this type of soltion is call top-down memorization sol
+
+function canSum(targetSum, numbers) {
   if (targetSum == 0) return true;
   if (targetSum < 0) return false;
 
@@ -10,7 +12,7 @@ const canSum = (targetSum, numbers) => {
     if (canSum(targetSum - num, numbers)) return true;
   }
   return false;
-};
+}
 
 // time ->O(m * n)
 // space -> O(m)
