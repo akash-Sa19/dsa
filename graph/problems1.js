@@ -18,6 +18,7 @@ const connectedComponenetsCount = (graph) => {
   let count = 0;
 
   for (let node in graph) {
+    console.log(node);
     if (explore(graph, node, visited) === true) {
       count++;
     }

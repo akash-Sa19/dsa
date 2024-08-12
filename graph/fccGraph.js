@@ -21,7 +21,7 @@ function depthFirstSearch(graph, source) {
   console.log(res);
   return res;
 }
-depthFirstSearch(graph, "a");
+console.log(depthFirstSearch(graph, "a"));
 
 function breadthFirstSearch(graph, source) {
   const queue = [source],
@@ -39,6 +39,7 @@ function breadthFirstSearch(graph, source) {
 }
 breadthFirstSearch(graph, "a");
 
+// adjacency list
 let graph2 = {
   f: ["g", "i"],
   g: ["h"],
@@ -48,6 +49,7 @@ let graph2 = {
   k: [],
 };
 function hasPath(graph, src, dst) {
+  //dst == destination
   if (src == dst) return true;
 
   const stack = [src];
@@ -62,7 +64,22 @@ function hasPath(graph, src, dst) {
 }
 console.log(hasPath(graph2, "f", "j"));
 
-function hasPathRecursive(graph, src, dst, visited) {
+function hasPathBFS(graph, src, dst) {
+  if (src == dst) return true;
+  const queue = [src];
+
+  while (queue.length > 0) {
+    let curr = queue.shift();
+    if (curr == dst) return true;
+    for (let neighbor of graph[curr]) {
+      queue.push(neighbor);
+    }
+  }
+  return false;
+}
+console.log(hasPathBFS(graph2, "f", "i"));
+
+function hasPathRecursive(graph, src, dst, visited = new Set()) {
   if (src === dst) return true;
 
   if (visited.has(src)) return false;
@@ -75,6 +92,7 @@ function hasPathRecursive(graph, src, dst, visited) {
   }
   return false;
 }
+console.log(hasPathRecursive(graph2, "f", "g"));
 
 let edges = [
   ["i", "j"],
@@ -85,7 +103,7 @@ let edges = [
 ];
 
 function createGraph(edges) {
-  if (!edges) return {};
+  if (edges.length == 0) return {};
 
   const graph = {};
   for (let edge of edges) {
@@ -98,13 +116,4 @@ function createGraph(edges) {
   console.log(graph);
   return graph;
 }
-// createGraph(edges);
-
-// this function with check if their is a path between node1 and ndoe2
-function undirectedPath(edges, nodeA, nodeB) {
-  const graph = createGraph(edges);
-  //   console.log(graph);
-  return hasPath(graph, nodeA, nodeB, new Set());
-}
-// undirectedPath(edges, "i", "k")
-console.log(undirectedPath(edges, "i", "o"));
+createGraph(edges);

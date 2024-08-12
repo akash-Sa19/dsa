@@ -17,7 +17,7 @@ function largestComponent(graph) {
   for (let node in graph) {
     console.log(node);
     const size = explore(graph, node, visited);
-    if (size > longest) longest = size;
+    longest = Math.max(longest, size);
   }
   return longest;
 }
